@@ -1,0 +1,105 @@
+./lem-in < test0
+echo ^должно быть OK \\n--------------
+./lem-in < test1
+echo ^должно быть OK \\n--------------
+./lem-in < test2
+echo ^должна быть ошибка \(два старта\) \\n--------------
+./lem-in < test3
+echo ^должна быть ошибка \(два конца\) \\n--------------
+./lem-in < test4
+echo ^должна быть ошибка \(одинаковые имена\) \\n--------------
+./lem-in < test5
+echo ^должна быть ошибка \(без комнат\) \\n--------------
+./lem-in < test6
+echo ^должна быть ошибка \(без связей\) \\n--------------
+./lem-in < test7
+echo ^должна быть ошибка \(нет пути\) \\n--------------
+./lem-in < test8
+echo ^должна быть ошибка \(в связях несуществующая комната\) \\n--------------
+./lem-in < test9
+echo ^должна быть ошибка \(пустой файл\) \\n--------------
+./lem-in < test10
+echo ^должна быть ошибка \(без старта\) \\n--------------
+./lem-in < test11
+echo ^должна быть ошибка \(без конца\) \\n--------------
+echo ---flow-one---
+./generator --flow-one > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-one > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-one > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-one > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-one > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+echo --- flow-ten---
+./generator --flow-ten > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-ten > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-ten > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-ten > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-ten > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+echo --- flow-thousand---
+./generator --flow-thousand > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-thousand > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-thousand > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-thousand > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+./generator --flow-thousand > test
+./lem-in < test | grep "^L" | wc -l
+./lem-in < test | grep "^#Here is the number of lines required:"
+echo ^должно быть OK \\n--------------
+echo ---big---
+./generator --big > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
+./generator --big > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
+./generator --big > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
+./generator --big > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
+./generator --big > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
+echo ---big-superposition---
+./generator --big-superposition > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
+./generator --big-superposition > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
+./generator --big-superposition > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
+./generator --big-superposition > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
+./generator --big-superposition > test
+./lem-in < test | grep "^#Here is the number of lines required:"
+time ./lem-in < test | grep "^L" | wc -l
